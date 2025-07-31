@@ -56,20 +56,5 @@ graph LR
     C --> E
     E --> F[Context Augmentation]
     F --> G[LLM Response Generation]
-    
-    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef data fill:#bbf,stroke:#333,stroke-width:2px;
-    class A,D data;
-    class B,C,E,F,G process;
 ```
-
-| Step | Component | Description |
-|------|-----------|-------------|
-| 1    | User Uploads PDFs | User provides documents through Streamlit UI |
-| 2    | Chunking & Embedding | PDFs split into 256-token chunks with MiniLM embeddings |
-| 3    | FAISS Vector DB | Embeddings stored in cosine-similarity optimized index |
-| 4    | User Query | Natural language question input via chat interface |
-| 5    | Similarity Search | Retrieves top-k relevant chunks from vector DB |
-| 6    | Context Augmentation | Prepends retrieved context to LLM prompt |
-| 7    | LLM Response Generation | Gemma-2B generates answer using augmented context |
 
