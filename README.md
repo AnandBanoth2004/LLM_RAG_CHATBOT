@@ -46,7 +46,7 @@ LLM-Chatbot-RAG-
 9.  The `gemma-2b-it` model **generates a response** based on the prompt.
 10. The final response is **displayed in the Streamlit chat window**.
 
-### 🖼 Workflow Diagram
+## RAG Workflow Architecture
 
 ```mermaid
 graph LR
@@ -56,27 +56,20 @@ graph LR
     C --> E
     E --> F[Context Augmentation]
     F --> G[LLM Response Generation]
-⚙️ Setup and Installation
-🧱 Prerequisites
-Python 3.8+
+    
+    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef data fill:#bbf,stroke:#333,stroke-width:2px;
+    class A,D data;
+    class B,C,E,F,G process;
+```
 
-A Hugging Face account with a read access token
+| Step | Component | Description |
+|------|-----------|-------------|
+| 1    | User Uploads PDFs | User provides documents through Streamlit UI |
+| 2    | Chunking & Embedding | PDFs split into 256-token chunks with MiniLM embeddings |
+| 3    | FAISS Vector DB | Embeddings stored in cosine-similarity optimized index |
+| 4    | User Query | Natural language question input via chat interface |
+| 5    | Similarity Search | Retrieves top-k relevant chunks from vector DB |
+| 6    | Context Augmentation | Prepends retrieved context to LLM prompt |
+| 7    | LLM Response Generation | Gemma-2B generates answer using augmented context |
 
-📦 Install the dependencies:
-bash
-Copy
-Edit
-pip install -r requirements.txt
-🔐 Set up environment variables:
-Create a .env file in the root directory and add your Hugging Face access token:
-
-env
-Copy
-Edit
-HUGGINGFACE_ACCESS_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-🚀 Run the Streamlit application:
-bash
-Copy
-Edit
-streamlit run src/app.py
-The application will open in your web browser. You can now upload PDFs and start asking questions!
