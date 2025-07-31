@@ -46,7 +46,8 @@ LLM-Chatbot-RAG-
 9.  The `gemma-2b-it` model **generates a response** based on the prompt.
 10. The final response is **displayed in the Streamlit chat window**.
 
-### Workflow Diagram
+### 🖼 Workflow Diagram
+
 ```mermaid
 graph LR
     A[User Uploads PDFs] --> B[Chunking & Embedding]
@@ -55,6 +56,7 @@ graph LR
     C --> E
     E --> F[Context Augmentation]
     F --> G[LLM Response Generation]
+
 ### Setup and Installation
 ## Prerequisites
 - Python 3.8+
