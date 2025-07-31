@@ -81,3 +81,4 @@ Note: Replace hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your actual Hugging Face 
 ```bash
 streamlit run src/app.py
 ```
+The application will open in your web browser. You can now upload PDFs and start asking questions!
