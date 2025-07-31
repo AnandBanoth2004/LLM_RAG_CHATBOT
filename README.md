@@ -58,3 +58,23 @@ graph LR
     F --> G[LLM Response Generation]
 ```
 
+##  Setup and Installation
+
+###  Prerequisites
+- Python 3.8+
+- Hugging Face account with [access token](https://huggingface.co/settings/tokens)
+
+###  Install Dependencies
+```bash
+pip install -r requirements.txt
+
+### Configure Environment
+1. Create `.env` file in root directory  
+2. Add your Hugging Face access token:  
+```env
+ACCESS_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+Note: Replace hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your actual Hugging Face token
+
+###  Run the Streamlit App
+```bash
+streamlit run src/app.py
