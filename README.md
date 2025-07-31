@@ -56,25 +56,27 @@ graph LR
     C --> E
     E --> F[Context Augmentation]
     F --> G[LLM Response Generation]
+⚙️ Setup and Installation
+🧱 Prerequisites
+Python 3.8+
 
-Setup and Installation
-Prerequisites
-- Python 3.8+
+A Hugging Face account with a read access token
 
-- A Hugging Face account with a read access token.
-
-Steps:
-## Install the dependencies:
+📦 Install the dependencies:
+bash
+Copy
+Edit
 pip install -r requirements.txt
-
-
-##Set up environment variables:
+🔐 Set up environment variables:
 Create a .env file in the root directory and add your Hugging Face access token:
 
+env
+Copy
+Edit
 HUGGINGFACE_ACCESS_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-
-##Run the Streamlit application:
-
+🚀 Run the Streamlit application:
+bash
+Copy
+Edit
 streamlit run src/app.py
 The application will open in your web browser. You can now upload PDFs and start asking questions!
