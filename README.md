@@ -67,14 +67,17 @@ graph LR
 ###  Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 ### Configure Environment
 1. Create `.env` file in root directory  
 2. Add your Hugging Face access token:  
 ```env
 ACCESS_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
 Note: Replace hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your actual Hugging Face token
 
 ###  Run the Streamlit App
 ```bash
 streamlit run src/app.py
+```
