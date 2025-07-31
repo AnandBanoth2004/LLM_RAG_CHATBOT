@@ -57,8 +57,8 @@ graph LR
     E --> F[Context Augmentation]
     F --> G[LLM Response Generation]
 
-### Setup and Installation
-## Prerequisites
+Setup and Installation
+Prerequisites
 - Python 3.8+
 
 - A Hugging Face account with a read access token.
