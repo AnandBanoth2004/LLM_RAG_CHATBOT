@@ -78,4 +78,3 @@ HUGGINGFACE_ACCESS_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 streamlit run src/app.py
 The application will open in your web browser. You can now upload PDFs and start asking questions!
-
